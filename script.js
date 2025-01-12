@@ -1,4 +1,4 @@
-const socket = io("https://your-backend-url.onrender.com"); // Replace with your backend URL
+const socket = io("https://realtime-chat-backend-49ll.onrender.com"); // Replace with your backend URL
 
 // Send message
 function sendMessage() {
