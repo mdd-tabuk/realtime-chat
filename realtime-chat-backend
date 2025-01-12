@@ -12,14 +12,18 @@ app.use(cors());
 io.on("connection", (socket) => {
     console.log("User connected:", socket.id);
 
+    // Broadcast new messages to all users
     socket.on("chatMessage", (msg) => {
+        console.log("Received message:", msg);
         io.emit("message", msg); // Send message to everyone
     });
 
+    // Typing indicator
     socket.on("typing", (user) => {
-        io.emit("typingStatus", user ? `${user} is typing...` : "");
+        socket.broadcast.emit("typingStatus", user ? `${user} is typing...` : "");
     });
 
+    // Handle disconnect
     socket.on("disconnect", () => {
         console.log("User disconnected");
     });
