@@ -1,4 +1,4 @@
-const socket = io("https://realtime-chat-jft3.onrender.com"); // Replace with your actual Render backend URL
+const socket = io("https://0b25920f-86cc-4369-8081-2fbd39c5d217-00-wj8qqoyp4zwr.pike.replit.dev/"); // Replace with your actual Render backend URL
 
 document.addEventListener("DOMContentLoaded", function () {
     console.log("Script loaded and DOM ready.");
